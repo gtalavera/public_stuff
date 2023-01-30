@@ -24,6 +24,7 @@ df_plot <- left_join(df_db, f_x_dia, by =  c("fechas" = "fecha_fallecimiento")) 
 
 ggplot(df_plot, 
        aes(x = fechas, y = cumsum(fallecidos))) + 
+
 geom_line(stat = "identity")  
 
 sum(f_x_dia$fallecidos)
